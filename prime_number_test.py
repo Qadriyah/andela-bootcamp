@@ -11,6 +11,10 @@ class PrimeNumberTestCases(unittest.TestCase):
         if result != 2:
             self.assertNotEqual(result % 2, 0)
 
+    def test_noninteger_number(self):
+        result = self.obj.generate_prime_number("5")
+        self.assertIsInstance(result, int)
+
 
 if __name__ == '__main__':
     unittest.main()
