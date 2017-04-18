@@ -1,5 +1,9 @@
 class PrimeNumber():
 
+    '''
+        This function has linear time complexity
+        Respresented by N(O)
+    '''
     def generate_prime_number(self, n):
         try:
             if n < 0:
