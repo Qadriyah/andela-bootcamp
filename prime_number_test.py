@@ -23,6 +23,9 @@ class PrimeNumberTestCases(unittest.TestCase):
         result = self.obj.generate_prime_number(5)
         self.assertLess(0, result)
 
+    def test_error_on_wrong_input(self):
+        self.assertRaises(TypeError, self.obj.generate_prime_number, '5')
+
 
 if __name__ == '__main__':
     unittest.main()
