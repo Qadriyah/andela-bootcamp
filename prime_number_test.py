@@ -19,6 +19,10 @@ class PrimeNumberTestCases(unittest.TestCase):
         result = self.obj.generate_prime_number(5)
         self.assertNotEqual(result % 2, 0)
 
+    def test_negative_number(self):
+        result = self.obj.generate_prime_number(5)
+        self.assertLess(0, result)
+
 
 if __name__ == '__main__':
     unittest.main()
