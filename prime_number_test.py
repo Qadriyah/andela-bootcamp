@@ -1,30 +1,35 @@
 import unittest
 from prime_number import PrimeNumber
 
+
 class PrimeNumberTestCases(unittest.TestCase):
 
     def setUp(self):
         self.obj = PrimeNumber()
 
-    def test_nonprime_number(self):
-        result = self.obj.generate_prime_number(6)
-        if result != 2:
-            self.assertNotEqual(result % 2, 0)
-
-    def test_noninteger_number(self):
-        result = self.obj.generate_prime_number("5")
-        self.assertIsInstance(result, int)
-
-    def test_prime_number(self):
-        result = self.obj.generate_prime_number(5)
-        self.assertNotEqual(result % 2, 0)
-
     def test_negative_number(self):
-        result = self.obj.generate_prime_number(5)
-        self.assertLess(0, result)
+        result = self.obj.generate_prime_numbers(-5)
+        self.assertEqual(
+            'Only positive integers allowed',
+            result,
+            msg='The input number should be a positive integer')
+
+    def test_for_empty_list(self):
+        result = self.obj.generate_prime_numbers(1)
+        self.assertEqual(
+            'Empty list of prime numbers',
+            result,
+            msg='The input number should be greater one')
+
+    def test_if_list_is_generated(self):
+        result = self.obj.generate_prime_numbers(10)
+        self.assertEqual(
+            [2, 3, 5, 7],
+            result,
+            msg='To generate a list of prime numbers, the input should be greater than 1')
 
     def test_error_on_wrong_input(self):
-        self.assertRaises(TypeError, self.obj.generate_prime_number, '5')
+        self.assertRaises(TypeError, self.obj.generate_prime_numbers, '5')
 
 
 if __name__ == '__main__':
