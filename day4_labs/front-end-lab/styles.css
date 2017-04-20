@@ -1,0 +1,141 @@
+body{
+	margin:0px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+	width: 100%;
+}
+.header{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	position: absolute;
+	top: 0;
+	font-size: small;
+	padding-top: 10px;
+}
+.header-elem{
+	margin: 0 10px 0 10px;
+	float: right;
+}
+.profile-pic{
+	width: 35px;
+	height: 35px;
+	border-radius: 100%;
+	margin: 3px 10px 0 10px;
+	float: right;
+	line-height: 35px;
+	text-align: center;
+	background-color: red;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: larger;
+}
+.profile-pic:hover{
+	cursor: pointer;
+}
+.notification-icon{
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	margin: 10px 10px 0 10px;
+	float: right;
+	line-height: 20px;
+	text-align: center;
+	color: #ffffff;
+	background-color: rgba(0, 0, 0, 0.6)
+}
+.notification-icon:hover{
+	cursor: pointer;
+}
+.menu-icon{
+	width: 25px;
+	height: 20px;
+	margin: 10px 10px 0 10px;
+	float: right;
+	line-height: 25px;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.6)
+}
+.menu-icon:hover{
+	cursor: pointer;
+}
+.content{
+	width: 100%;
+	position: relative;
+	top: 60px;
+	/* background-color: rgba(0, 0, 0, 0.6); */
+	text-align: center;
+}
+.search-form{
+	margin-top: 20px;
+}
+.img-container{
+	margin-top: 150px;
+}
+.search-field{
+	vertical-align: bottom;
+}
+#search{
+	height: 40px;
+	width: 600px;
+	border-radius: 2px;
+	border: solid thin #cccccc;
+	box-shadow: 1px 1px 1px #cccccc;
+	margin-bottom: 20px;
+}
+#search:hover{
+	box-shadow: 3px 3px 3px #cccccc;
+}
+#submit{
+	padding: 5px 20px 5px 20px;
+}
+#btn{
+	padding: 5px 20px 5px 20px;
+}
+#submit:hover{
+	font-weight: bold;
+	border: solid thin #cccccc;
+	border-radius: 2px;
+	box-shadow: 1px 1px 1px #cccccc;
+	cursor: pointer;
+}
+#btn:hover{
+	font-weight: bold;
+	border: solid thin #cccccc;
+	border-radius: 2px;
+	box-shadow: 1px 1px 1px #cccccc;
+	cursor: pointer;
+}
+.footer{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background: rgba(117, 117, 117, 0.15);
+	position: fixed;
+	bottom: 0;
+	font-size: small;
+	z-index: 1;
+}
+.footer-left-elem{
+	opacity: 0.5;
+	margin: 0 20px 0 30px;
+	float: left;
+}
+.footer-right-elem{
+	opacity: 0.5;
+	margin: 0 30px 0 20px;
+	float: right;
+}
+.footer-left-elem a, 
+.footer-right-elem a, 
+.header-elem a{
+	text-decoration: none;
+	color: #000000;
+}
+.footer-left-elem a:hover, 
+.footer-right-elem a:hover, 
+.header-elem a:hover{
+	text-decoration: underline;
+	color: #000000;
+}
