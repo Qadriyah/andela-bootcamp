@@ -2,27 +2,28 @@
 class BinarySearch(list):
 
     def __init__(self, a, b):
-        item = b
-        for x in range(a):
-            if item > a:
-                break
+        item_list = [x for x in range(b, (a * b) + 1, b)]
+        for item in item_list:
             self.append(item)
-            item += b
-        self.length = len(self)
+        self.length = a
 
-    def searchs(self, item):
+    def search(self, number):
         result = {}
         count = 0
         first_item_pos = 0
         last_item_pos = self.length - 1
-        while first_item_pos < last_item_pos:
+        while first_item_pos <= last_item_pos:
             mid_point = (first_item_pos + last_item_pos)//2
-            if item > self[mid_point]:
-                first_item_pos = mid_point + 1
+            if number == self[mid_point]:
+                break
             else:
-                last_item_pos = mid_point
+                if number > self[mid_point]:
+                    first_item_pos = mid_point + 1
+                else:
+                    last_item_pos = mid_point - 1
             count += 1
-        if self[first_item_pos] != item:
-            first_item_pos = -1
-        result.update({count: first_item_pos})
+        if self[mid_point] != number:
+            mid_point = -1
+        result.update({'count': count})
+        result.update({'index': mid_point})
         return result
